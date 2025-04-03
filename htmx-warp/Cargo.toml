@@ -1,0 +1,17 @@
+[package]
+name = "htmx-warp"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+html-escape = { workspace = true }
+htmx = { workspace = true }
+prost = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+tonic = { workspace = true }
+warp = "0.3.7"
+
+[build-dependencies]
+tonic-build = "0.13.0"
