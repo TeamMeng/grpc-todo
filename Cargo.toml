@@ -1,9 +1,29 @@
-[package]
-name = "grpc-todo"
-version = "0.1.0"
-edition = "2024"
-license = "MIT"
+[workspace]
+members = ["grpc-todo", "htmx-warp"]
+resolver = "2"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[workspace.dependencies]
+anyhow = "1.0.97"
+html-escape = "0.2.13"
+htmx = "0.1.0"
+prost = "0.13.5"
+serde = { version = "1.0.219", features = ["derive"] }
+sqlx = { version = "0.8.3", features = [
+    "postgres",
+    "runtime-tokio",
+    "tls-rustls",
+    "chrono",
+    "uuid",
+] }
+tokio = { version = "1.44.1", features = [
+    "rt",
+    "rt-multi-thread",
+    "macros",
+    "net",
+    "sync",
+] }
+tonic = "0.13.0"
+tonic-build = "0.13.0"
+tonic-web = "0.13.0"
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["cors"] }
